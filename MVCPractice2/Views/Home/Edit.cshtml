@@ -1,0 +1,56 @@
+﻿@model MVCPractice2.Models.CompanyModel
+
+<html>
+<head>
+    <title>creating emp</title>
+</head>
+<body>
+    <div>
+        <form action="/Home/Edit" method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>name</td>
+                        <td>
+                            <input type="hidden" name="id" value="@Model.id"/>
+                            <input type="text" name="name" value="@Model.name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>
+                            <input type="text" name="email" value="@Model.email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>age</td>
+                        <td>
+                            <input type="text" name="age" value="@Model.age"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>dept</td>
+                        <td>
+                            <input type="text" name="dept" value="@Model.dept"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>salary</td>
+                        <td>
+                            <input type="text" name="salary" value="@Model.salary"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <center>
+                                <input type="submit" name="btnCreate" value="UpdateRecord" />
+                            </center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

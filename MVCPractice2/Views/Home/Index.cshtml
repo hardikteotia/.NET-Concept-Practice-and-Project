@@ -1,0 +1,42 @@
+﻿<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <hr />
+        <a href="/Home/Create">Add Employee</a>
+        <hr />
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>age</th>
+                    <th>dept</th>
+                    <th>salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var e in Model)
+                {
+                    <tr>
+                        <td>@e.id</td>
+                        <td>@e.name</td>
+                        <td>@e.email</td>
+                        <td>@e.age</td>
+                        <td>@e.dept</td>
+                        <td>@e.salary</td>
+                        <td>
+                            <a href="/Home/Edit/@e.id">Edit</a>
+                        </td>
+                        <td>
+                            <a href="/Home/Delete/@e.id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+</html>
