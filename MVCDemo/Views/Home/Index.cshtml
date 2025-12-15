@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/Master.cshtml";
+}
+
+<div style="float: right">
+    <a href="/Login/SignOut" class="btn btn-outline-primary">Sign Out</a>
+</div>
+
+@* <div style="float-right">
+    <a href="/Login/SignOut" class="btn btn-outline-primary"></a>
+</div> *@
+
+<h1>Welcome Home</h1>
+
+<hr />
+
+<div class="table-responsive-md" style="margin: 80px">
+    <a href="/Home/Create" class="btn btn-outline-primary">Add New Record</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>EMail</th>
+                <th>Address</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var student in Model)
+            {
+                <tr>
+                    <td>@student.No</td>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.Address</td>
+                    <td>@student.EMail</td>
+                    <td>
+                        <a href = "/Home/Edit/@student.No" class="btn btn-outline-warning">Edit</a>
+                    </td>
+                    <td>
+                        <a href="/Home/Delete/@student.No" class="btn btn-outline-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

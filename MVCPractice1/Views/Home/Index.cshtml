@@ -1,0 +1,41 @@
+﻿@model List<MVCPractice1.Models.Student>
+<html>
+    <head>
+        <title>Displaying Student</title>
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js" ></script>
+    </head>
+
+    <body class="container">
+
+        <hr />
+        <div>
+            <a href="/Home/Create" class="btn btn-outline-primary">Add new record</a>
+        </div>
+        <div class="table-responsive" style="margin:80px">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <td>id</td>
+                        <td>name</td>
+                        <td>sclass</td>
+                        <td>age</td>
+                        <td>isActive</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.id</td>
+                            <td>@item.name</td>
+                            <td>@item.sclass</td>
+                            <td>@item.age</td>
+                            <td>@item.isActive</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

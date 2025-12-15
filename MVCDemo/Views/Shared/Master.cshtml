@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    @* we can give </link> otherwise it asks for something means it doesnt work*@
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body class="container">
+    <img src="~/lib/logo.jpg" style="height: 100px; width: 100px"/>
+    <hr />
+
+    <div style="float: right; font-size: medium; font-weight: bolder">
+        Welcome @ViewBag.UserName
+    </div>
+
+    <br />
+    <a href="/Home/Index">Home</a> | 
+    <a href="/Home/About">About Us</a> | 
+    <a href="/Home/Contact">Contact Us</a> | 
+    <hr />
+    <br />
+    
+    <div>
+        @RenderBody()
+    </div>
+    <br />
+    <hr />
+    <center><b> &copy; Developed By Hardik DAC 2025 - August All rights reserved.</b></center>
+</body>
+</html>

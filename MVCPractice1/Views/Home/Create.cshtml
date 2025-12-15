@@ -1,0 +1,43 @@
+﻿<html>
+    <head>
+        <title>Create Form</title>
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    </head>
+    <body class="container">
+        <div>
+            <a href="/Home/Index">Go back</a>
+        </div>
+        <div class="table-responsive">
+            <form action="/Home/AfterCreate" method="post">
+                <table class="table table-bordered text-center">
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>
+                                <input type="text" name="name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>sClass</td>
+                            <td>
+                                <input type="text" name="sClass"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>age</td>
+                            <td>
+                                <input type="text" name="age"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Submit" name="btnCreate"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
