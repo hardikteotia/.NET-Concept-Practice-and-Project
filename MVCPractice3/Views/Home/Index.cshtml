@@ -1,0 +1,47 @@
+﻿
+<html>
+    <head>
+        <title>Get prods</title>
+    </head>
+    <body>
+        <br />
+        <div>
+            <a href="/Home/Create">Add Prod</a>
+        </div>
+        <hr />
+        <br />
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>quantity</th>
+                        <th>isavailable</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var p in Model){
+                        <tr>
+                            <td>@p.id</td>
+                            <td>@p.name</td>
+                            <td>@p.price</td>
+                            <td>@p.quantity</td>
+                            <td>@p.isavailable</td>
+                            <td>
+                                <a href="/Home/Edit/@p.id">Edit</a>
+                            </td>
+                            <td>
+                                <a href="/Home/Delete/@p.id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

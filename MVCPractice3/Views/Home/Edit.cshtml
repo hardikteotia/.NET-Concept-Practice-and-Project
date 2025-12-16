@@ -1,0 +1,51 @@
+﻿@model MVCPractice3.Models.productpoco
+<html>
+<head>
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <form action="/Home/Edit" method="post">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="hidden" name="id" value="@Model.id" />
+                        <input type="text" name="name" value="@Model.name"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Price</td>
+                    <td>
+                        <input type="text" name="price" value="@Model.price"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Quantity</td>
+                    <td>
+                        <input type="text" name="quantity" value="@Model.quantity"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>isavailable</td>
+                    <td>
+                        <input type="text" name="isavailable" value="@Model.isavailable.ToString()" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <centre>
+                        <td>
+                            <input type="submit" name="btnsubmit" value="editrecord" />
+                        </td>
+                    </centre>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>
